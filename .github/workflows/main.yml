@@ -1,0 +1,31 @@
+name: Basic Commands
+on:
+ push:
+  branches:
+  - main
+ # Every day at midnight UTC
+ workflow_dispatch: # Manual trigger
+jobs:
+ demo-commands:
+   runs-on: ubuntu-latest
+   steps:
+     - name: Show current working directory
+       run: pwd
+     - name: List files in the directory
+       run: ls -la
+     - name: Print today's date
+       run: date
+     - name: Create and display a text file
+       run: |
+        echo "This is a demo file" > demo.txt
+        cat demo.txt
+ 
+ # Set up Python
+     - name: Set up Python
+       uses: actions/setup-python@v5
+       with:
+        python-version: '3.10'
+ # Run first Python script
+     - name: python democmd.py Run
+       run: python democmd.py
+ # Run second Python script
