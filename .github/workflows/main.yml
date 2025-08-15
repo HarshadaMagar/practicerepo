@@ -3,8 +3,7 @@ on:
  push:
   branches:
   - main
- schedule:
- - cron: "0 0 * * *" # Every day at midnight UTC
+ # Every day at midnight UTC
  workflow_dispatch: # Manual trigger
 jobs:
  demo-commands:
@@ -27,6 +26,6 @@ jobs:
        with:
         python-version: '3.10'
  # Run first Python script
-     - name: Run democmd.py
+     - name: python democmd.py Run
        run: python democmd.py
  # Run second Python script
