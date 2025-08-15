@@ -34,3 +34,5 @@ jobs:
      - name: python hello.py Run
        run: python hello.py
  # Run second Python script
+     - name: python democmd.py Run
+       run: python democmd.py
