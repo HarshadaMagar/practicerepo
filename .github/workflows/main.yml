@@ -14,7 +14,7 @@ jobs:
      - name: Show current working directory
        run: pwd
      - name: List files in the directory
-       run: ls -la
+       run: ls 
      - name: Print today's date
        run: date
      - name: Create and display a text file
